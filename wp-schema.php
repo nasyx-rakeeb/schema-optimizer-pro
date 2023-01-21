@@ -4,6 +4,7 @@
 * Text Domain: wp-schema
 * Description: WP Schema generates and adds schema markup to your website, making it easier for search engines to understand and index your content. It improves your website's visibility, increases traffic and enhances search results. It allows you to customize the schema markup using custom fields, enable caching for performance optimization and debug mode for testing and validation.
 * Version: 1.0
+* Requires PHP: 5.6
 * Requires at least: 4.5
 * Tested up to: 6.1.1
 * Plugin URI: https://github.com/nasyx-rakeeb/wp-schema
