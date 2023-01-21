@@ -22,7 +22,7 @@ A simple WordPress plugin that automatically generates custom schema markup for 
 - Plugin created by [Nasyx Rakeeb](https://nasyxrakeeb.vercel.app)
 
 ## License
-- This plugin is licensed under [GPL2](https://github.com/nasyx-rakeeb/Schema Pro/blob/main/LICENSE.txt)
+- This plugin is licensed under [GPL2](https://github.com/nasyx-rakeeb/schema-pro/blob/main/LICENSE.txt)
 
 ## Changelog
 - 1.0 - Initial release
