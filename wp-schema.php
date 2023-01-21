@@ -6,7 +6,7 @@
 * Version: 1.0
 * Requires at least: 4.5
 * Tested up to: 6.1.1
-* Plugin URI: https://wordpress.org/plugins/wp-schema/
+* Plugin URI: https://github.com/nasyx-rakeeb/wp-schema
 * Author URI: https://nasyxrakeeb.vercel.app
 * Author: Nasyx Rakeeb
 * License: GPL2
