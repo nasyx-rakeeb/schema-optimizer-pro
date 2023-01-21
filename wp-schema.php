@@ -10,6 +10,7 @@
 * Author URI: https://nasyxrakeeb.vercel.app
 * Author: Nasyx Rakeeb
 * License: GPL2
+* License URI: https://github.com/nasyx-rakeeb/wp-schema/blob/main/LICENSE.txt
 */
 
 class SEO_Schema_Markup_Generator {
