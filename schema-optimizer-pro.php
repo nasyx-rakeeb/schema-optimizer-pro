@@ -1,17 +1,17 @@
 <?php
 /*
-* Plugin Name: Schema Pro
-* Text Domain: schema-pro
-* Description: Schema Pro lets you easily add schema markup to your website, increasing search visibility and traffic, with ability to customize schema markup using custom fields, optimize performance with caching and validate with debug mode.
+* Plugin Name: Schema Optimizer Pro
+* Text Domain: schema-optimizer-pro
+* Description: Schema Optimizer Pro lets you easily add schema markup to your website, increasing search visibility and traffic, with ability to customize schema markup using custom fields, optimize performance with caching and validate with debug mode.
 * Version: 1.0
 * Requires PHP: 5.6
 * Requires at least: 4.5
 * Tested up to: 6.1.1
-* Plugin URI: https://github.com/nasyx-rakeeb/schema-pro
+* Plugin URI: https://github.com/nasyx-rakeeb/schema-optimizer-pro
 * Author URI: https://nasyxrakeeb.vercel.app
 * Author: Nasyx Rakeeb
 * License: GPL2
-* License URI: https://github.com/nasyx-rakeeb/schema-pro/blob/main/LICENSE.txt
+* License URI: https://github.com/nasyx-rakeeb/schema-optimizer-pro/blob/main/LICENSE.txt
 */
 
 class SEO_Schema_Markup_Generator {
@@ -21,7 +21,7 @@ class SEO_Schema_Markup_Generator {
         add_action('admin_init', array($this, 'register_settings'));
 
         function add_settings_link($links) {
-            $settings_link = '<a href="admin.php?page=schema-pro">Settings</a>';
+            $settings_link = '<a href="admin.php?page=schema-optimizer-pro">Settings</a>';
             array_unshift($links, $settings_link);
             return $links;
         }
@@ -29,27 +29,27 @@ class SEO_Schema_Markup_Generator {
     }
 
     public function add_settings_page() {
-        add_menu_page('Schema Pro', 'Schema Pro', 'manage_options', 'schema-pro', array($this, 'display_settings_page'), 'dashicons-admin-generic', 99);
+        add_menu_page('Schema Optimizer Pro', 'Schema Optimizer Pro', 'manage_options', 'schema-optimizer-pro', array($this, 'display_settings_page'), 'dashicons-admin-generic', 99);
     }
 
     public function register_settings() {
-        register_setting('schema-pro-options', 'schema-pro-options', array($this, 'sanitize_options'), array('custom_fields' => '', 'cache_enabled' => 0, 'debug_mode' => 0));
+        register_setting('schema-optimizer-pro-options', 'schema-optimizer-pro-options', array($this, 'sanitize_options'), array('custom_fields' => '', 'cache_enabled' => 0, 'debug_mode' => 0));
     }
 
     public function display_settings_page() {
-        $options = get_option('schema-pro-options');
+        $options = get_option('schema-optimizer-pro-options');
         ?>
         <div class="wrap">
-            <h1>Schema Pro</h1>
+            <h1>Schema Optimizer Pro</h1>
             <form method="post" action="options.php">
-                <?php settings_fields('schema-pro-options'); ?>
+                <?php settings_fields('schema-optimizer-pro-options'); ?>
                 <table class="form-table">
                     <tr>
                         <th>
-                            <label for="schema-pro-options[custom_fields]">Custom Fields</label>
+                            <label for="schema-optimizer-pro-options[custom_fields]">Custom Fields</label>
                         </th>
                         <td>
-                            <input type="text" id="schema-pro-options[custom_fields]" name="schema-pro-options[custom_fields]" value="<?php echo esc_attr(isset($options['custom_fields']) ? $options['custom_fields'] : ''); ?>" class="regular-text">
+                            <input type="text" id="schema-optimizer-pro-options[custom_fields]" name="schema-optimizer-pro-options[custom_fields]" value="<?php echo esc_attr(isset($options['custom_fields']) ? $options['custom_fields'] : ''); ?>" class="regular-text">
                             <p class="description">
                                 Enter a comma-separated list of custom fields to use for the schema markup.
                             </p>
@@ -60,8 +60,8 @@ class SEO_Schema_Markup_Generator {
 
                         </th>
                         <td>
-                            <input type="checkbox" id="schema-pro-options[cache_enabled]" name="schema-pro-options[cache_enabled]" value="1" <?php checked(isset($options['cache_enabled']) ? $options['cache_enabled'] : 0, 1); ?>>
-                            <label for="schema-pro-options[cache_enabled]"><strong>Enable caching</strong></label>
+                            <input type="checkbox" id="schema-optimizer-pro-options[cache_enabled]" name="schema-optimizer-pro-options[cache_enabled]" value="1" <?php checked(isset($options['cache_enabled']) ? $options['cache_enabled'] : 0, 1); ?>>
+                            <label for="schema-optimizer-pro-options[cache_enabled]"><strong>Enable caching</strong></label>
                             <p class="description">
                                 Enable caching of the generated schema markup for improved performance.
                             </p>
@@ -73,8 +73,8 @@ class SEO_Schema_Markup_Generator {
 
                         </th>
                         <td>
-                            <input type="checkbox" id="schema-pro-options[debug_mode]" name="schema-pro-options[debug_mode]" value="1" <?php checked(isset($options['debug_mode']) ? $options['debug_mode'] : 0, 1); ?>>
-                            <label for="schema-pro-options[debug_mode]"><strong>Debug mode</strong></label>
+                            <input type="checkbox" id="schema-optimizer-pro-options[debug_mode]" name="schema-optimizer-pro-options[debug_mode]" value="1" <?php checked(isset($options['debug_mode']) ? $options['debug_mode'] : 0, 1); ?>>
+                            <label for="schema-optimizer-pro-options[debug_mode]"><strong>Debug mode</strong></label>
                             <p class="description">
                                 Enable debug mode to view and validate the generated schema markup.
                             </p>
@@ -98,7 +98,7 @@ class SEO_Schema_Markup_Generator {
     public function generate_schema_markup() {
         global $post;
 
-        $options = get_option('schema-pro-options');
+        $options = get_option('schema-optimizer-pro-options');
 
         if ($options['cache_enabled']) {
             // check for cached schema markup
