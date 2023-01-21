@@ -19,7 +19,7 @@ A simple WordPress plugin that automatically generates custom schema markup for 
 - WordPress 4.5 or higher
 
 ## Credits
-- Plugin created by Nasyx Rakeeb
+- Plugin created by [Nasyx Rakeeb](https://nasyxrakeeb.vercel.app)
 
 ## License
 - This plugin is licensed under [GPL2](https://github.com/nasyx-rakeeb/wp-schema/blob/main/LICENSE.txt)
