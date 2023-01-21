@@ -1,4 +1,4 @@
-# WP-Schema 
+# Schema Pro
 
 A simple WordPress plugin that automatically generates custom schema markup for better SEO. Improve your website's visibility in search results and increase traffic with minimal effort.
 
@@ -12,7 +12,7 @@ A simple WordPress plugin that automatically generates custom schema markup for 
 1. Download the plugin from the WordPress repository or from the releases page on this repository.
 2. Install the plugin in your WordPress site by going to Plugins > Add New > Upload Plugin.
 3. Activate the plugin.
-4. Go to the plugin settings page (Settings > WP-Schema) to configure the plugin.
+4. Go to the plugin settings page (Settings > Schema Pro) to configure the plugin.
 5. Start improving your website's visibility in search results and increase traffic.
 
 ## Requirements
@@ -22,7 +22,7 @@ A simple WordPress plugin that automatically generates custom schema markup for 
 - Plugin created by [Nasyx Rakeeb](https://nasyxrakeeb.vercel.app)
 
 ## License
-- This plugin is licensed under [GPL2](https://github.com/nasyx-rakeeb/wp-schema/blob/main/LICENSE.txt)
+- This plugin is licensed under [GPL2](https://github.com/nasyx-rakeeb/Schema Pro/blob/main/LICENSE.txt)
 
 ## Changelog
 - 1.0 - Initial release
